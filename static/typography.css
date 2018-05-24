@@ -1,0 +1,75 @@
+body, input {
+  color: #1f242a;
+  font-family: "museo-sans", sans-serif;
+  font-weight: 200;
+  word-spacing: 2px;
+}
+
+h1, h2 {
+  margin: 0;
+  font-family: "museo-slab", sans-serif;
+  font-weight: 200;
+}
+
+h3, h4, h5, h6,
+p, li, span, i {
+  margin: 0;
+  font-family: "museo-sans", sans-serif;
+  font-weight: 200;
+}
+
+a, a * {
+  color: #1f242a;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+
+h1, h1 * {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+h2, h2 * {
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: 500;
+}
+
+h3, h3 * {
+  font-size: 14px;
+  line-height: 1.38;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 42px;
+  letter-spacing: 1px;
+}
+
+p, p *, li, li *, i, i * {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+small, small * {
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+label, label * {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+strong, b {
+  font-weight: 900;
+  color: #000;
+}

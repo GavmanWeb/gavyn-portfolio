@@ -1,0 +1,31 @@
+{
+  "name": "next-starter",
+  "version": "1.0.0",
+  "description": "Next Starter",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "export": "next export",
+    "build": "next build"
+  },
+  "author": "Gavyn Caldwell (gavmanweb@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-client-preset": "^1.0.8",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-styled-components": "^1.4.0",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "^4.2.1",
+    "react": "^16.2.0",
+    "react-apollo": "^2.1.4",
+    "react-dom": "^16.2.0",
+    "standard": "^10.0.3",
+    "styled-components": "^2.4.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
