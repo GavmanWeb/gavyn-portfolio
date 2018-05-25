@@ -1,42 +1,44 @@
 import Portfolio from '../components/portfolio'
 import withData from '../lib/withData'
+import { Section, Page } from '../styles/base'
 
 export default withData((props) => {
   return (
-    <div className='c-page'>
-      <section className='o-section o-section--gradient o-section--center'>
-        <div className='c-img-container c-img-container--about-me'>
+    <Page>
+      <Section gradient center>
+        <div className='hero-img-container'>
           <img alt='Responsive Web Developer in Utah' src='https://res.cloudinary.com/gavmanweb/image/upload/v1491349329/portfolio/gavyn_caldwell_alt_riqaio.jpg' />
         </div>
-        <p className='c-about-me-title'>
+
+        <p className='hero-title'>
           Husband, Siberian Husky Dad, Yo-Yoer and Front End Web Developer
         </p>
 
-        <div className='c-about-me-links'>
+        <div className='hero-links'>
           <a
             href='https://github.com/GavMan1995'
             target='_blank'
             rel='noopener noreferrer'>
-            <span className='fa fa-github-square' />
+            <span className='fab fa-github-square' />
           </a>
 
           <a
             href='https://www.linkedin.com/in/gavman1995/'
             target='_blank'
             rel='noopener noreferrer'>
-            <span className='fa fa-linkedin-square' />
+            <span className='fab fa-linkedin' />
           </a>
 
           <a
             href='https://codepen.io/gavman1995/'
             target='_blank'
             rel='noopener noreferrer'>
-            <span className='fa fa-codepen' />
+            <span className='fab fa-codepen' />
           </a>
         </div>
-      </section>
+      </Section>
 
-      <section className='o-section o-section--white'>
+      <Section white>
         <main className='o-section__main-content'>
           <h1 className='o-section__header'>About Me</h1>
           <p className='c-about-me-copy'>
@@ -67,7 +69,7 @@ export default withData((props) => {
             {images.map((image, i) => <div key={i}><img src={image} alt='' /></div>)}
           </Carousel>
         </aside> */}
-      </section>
+      </Section>
 
       <section className='o-section'>
         <aside className='o-section__aside-content o-section__aside-content--center o-section__aside-content--last-on-mobile'>
@@ -117,6 +119,6 @@ export default withData((props) => {
       </section>
 
       <Portfolio />
-    </div>
+    </Page>
   )
 })
