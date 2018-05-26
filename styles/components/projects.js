@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 import { flexContainer, flexItem } from '../tools/mixins'
-import { neutral5, neutral6, neutral1 } from '../tools/variables'
+import { neutral5, neutral6, neutral1, sm } from '../tools/variables'
 
 export const ProjectsContainer = styled.section`
   ${flexContainer('flex-start', 'stretch', 'stretch')};
   width: 100%;
   padding: 80px calc(50% - 600px);
   background-color: ${neutral5};
+
+  @media (max-width: ${sm}) {
+    padding: 40px 16px;
+  }
 
   .header {
     width: 100%;

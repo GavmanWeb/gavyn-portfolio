@@ -42,6 +42,10 @@ export const Section = styled.section`
   background-color: ${neutral5};
   color: #fff;
 
+  @media (max-width: ${sm}) {
+    padding: 40px 16px;
+  }
+
   ${props => props.white && css`
     background-color: #fff;
     color: ${neutral6};
