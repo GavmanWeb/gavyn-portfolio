@@ -10,7 +10,7 @@ export const ProjectsContainer = styled.section`
   background-color: ${neutral5};
 
   @media (max-width: ${sm}) {
-    padding: 40px 16px;
+    padding: 40px 0;
   }
 
   .header {
