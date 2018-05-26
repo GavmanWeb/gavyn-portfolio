@@ -1,7 +1,7 @@
 {
-  "name": "next-starter",
+  "name": "gavyn-caldwell-portfolio",
   "version": "1.0.0",
-  "description": "Next Starter",
+  "description": "My Portfolio",
   "main": "index.js",
   "scripts": {
     "dev": "next",
