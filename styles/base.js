@@ -27,7 +27,9 @@ export const container = styled.div`
 `
 
 export const Page = styled.div`
+  max-width: 1920px;
   height: 100%;
+  margin: auto;
 
   @media (min-width: 1920px) {
     box-shadow: 0 0 48px 8px ${neutral6};
@@ -60,7 +62,6 @@ export const Section = styled.section`
   `}
 
   ${props => props.gradient && css`
-    margin-top: 56px;
     background: linear-gradient(
       to bottom right,
       #fd746c, ${purple},

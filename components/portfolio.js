@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 
-import { ProjectsContainer, ProjectPlaceholder } from '../styles/components/projects'
+import { ProjectsContainer, ProjectPlaceholder, Project } from '../styles/components/projects'
 
 function Portfolio ({ data: { loading, allPortfolios }, loadMorePosts }) {
   if (loading) {
@@ -9,22 +9,16 @@ function Portfolio ({ data: { loading, allPortfolios }, loadMorePosts }) {
   } else {
     return (
       <ProjectsContainer>
+        <h1 className='header'>Projects</h1>
         {allPortfolios.map((project, i) => {
           return (
-            <a
-              key={i}
-              href={project.link}
-              rel='noopener noreferrer'
-              target='_blank'
-              className='project'>
-              <img
-                alt='Responsive Web Developer in Utah'
-                src={project.image.url} />
+            <Project key={i} href={project.link} rel='noopener noreferrer' target='_blank' image={project.image.url}>
+              <div className='img-container' />
               <div className='project-about'>
                 <h1>{project.name}</h1>
                 <h3>{project.description}</h3>
               </div>
-            </a>
+            </Project>
           )
         })}
 

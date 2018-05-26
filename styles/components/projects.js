@@ -1,59 +1,60 @@
 import styled from 'styled-components'
-import { transparentize } from 'polished'
 
 import { flexContainer, flexItem } from '../tools/mixins'
-import { neutral5, green, sm } from '../tools/variables'
+import { neutral5, neutral6, neutral1 } from '../tools/variables'
 
 export const ProjectsContainer = styled.section`
-  ${flexContainer()};
+  ${flexContainer('flex-start', 'stretch', 'stretch')};
   width: 100%;
+  padding: 80px calc(50% - 600px);
   background-color: ${neutral5};
 
-  .project {
-    position: relative;
-    ${flexItem('480px', '1')};
-    height: 380px;
-    overflow: hidden;
+  .header {
+    width: 100%;
+    color: #fff;
+    padding-bottom: 16px;
+    text-align: center;
+  }
+`
 
-    > img {
-      height: 100%;
-      min-width: 100%;
-    }
+export const Project = styled.a`
+  ${flexItem('480px', '1')};
+  margin: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s;
 
-    @media (max-width: ${sm}) {
-      height: auto;
+  &:hover {
+    box-shadow: 2px 2px 16px 2px #000;
+    transform: scale(1.01);
+  }
 
-      > img {
-        width: 100%;
-        height: auto;
-      }
-    }
+  .img-container {
+    height: 220px;
+    width: 100%;
+    background-image: url(${props => props.image});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
   }
 
   .project-about {
-    ${flexContainer('center', 'center', 'center')};
-    position: absolute;
-    top: 0;
-    left: 0;
+    ${flexContainer('center')};
     width: 100%;
     height: 100%;
-    padding: 8px;
-    background-color: ${transparentize(0.2, green)};
-    opacity: 0;
+    padding: 24px 16px;
+    background-color: ${neutral1};
     transition: opacity 0.3s;
 
     > h1, h3 {
       width: 100%;
       text-align: center;
-      color: #fff;
-    }
-
-    &:hover {
-      opacity: 1;
+      color: ${neutral6};
     }
   }
 `
 
 export const ProjectPlaceholder = styled.div`
   ${flexItem('480px', '1')};
+  margin: 0 16px;
 `

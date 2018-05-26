@@ -49,7 +49,7 @@ export default withData((props) => {
             to use my creativity while making amazing websites.
             My professional experience includes working closely with Designers and Back End
             developers, creating enterprise and financial tech apps, leading a front end team.
-            Outside of coding, I love to go on adventures with my wife and siberian husky!
+            Outside of coding, I love to go on adventures with my wife, siberian husky, and german shepherd!
           </p>
         </main>
 
