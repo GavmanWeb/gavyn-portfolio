@@ -70,10 +70,6 @@ export const Section = styled.section`
     background-repeat: no-repeat;
     background-size: 1000% 1000%;
     animation: ${gradientbg} 150s ease infinite;
-
-    @media (max-width: ${sm}) {
-      margin-top: 42px;
-    }
   `}
 
   ${props => props.hireme && css`
