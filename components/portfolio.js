@@ -1,35 +1,37 @@
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 
+import { ProjectsContainer, ProjectPlaceholder } from '../styles/components/projects'
+
 function Portfolio ({ data: { loading, allPortfolios }, loadMorePosts }) {
   if (loading) {
     return <div>Loading...</div>
   } else {
     return (
-      <section className='c-projects'>
+      <ProjectsContainer>
         {allPortfolios.map((project, i) => {
           return (
-                <a
-                  key={i}
-                  href={project.link}
-                  rel='noopener noreferrer'
-                  target='_blank'
-                  className='c-projects__project'>
-                  <img
-                    alt='Responsive Web Developer in Utah'
-                    src={project.image.url} />
-                  <div className='c-project__about'>
-                    <h1>{project.name}</h1>
-                    <h3>{project.description}</h3>
-                  </div>
-                </a>
-              )
+            <a
+              key={i}
+              href={project.link}
+              rel='noopener noreferrer'
+              target='_blank'
+              className='project'>
+              <img
+                alt='Responsive Web Developer in Utah'
+                src={project.image.url} />
+              <div className='project-about'>
+                <h1>{project.name}</h1>
+                <h3>{project.description}</h3>
+              </div>
+            </a>
+          )
         })}
 
-        <div className='c-projects__project-placeholder' />
-        <div className='c-projects__project-placeholder' />
-        <div className='c-projects__project-placeholder' />
-      </section >
+        <ProjectPlaceholder />
+        <ProjectPlaceholder />
+        <ProjectPlaceholder />
+      </ProjectsContainer>
     )
   }
 }

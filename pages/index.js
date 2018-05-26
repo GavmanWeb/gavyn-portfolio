@@ -1,17 +1,17 @@
 import Portfolio from '../components/portfolio'
 import withData from '../lib/withData'
-import { Section, Page } from '../styles/base'
+import { Section, Page, ImageContainer } from '../styles/base'
 
 export default withData((props) => {
   return (
     <Page>
       <Section gradient center>
-        <div className='hero-img-container'>
+        <ImageContainer heroImage>
           <img alt='Responsive Web Developer in Utah' src='https://res.cloudinary.com/gavmanweb/image/upload/v1491349329/portfolio/gavyn_caldwell_alt_riqaio.jpg' />
-        </div>
+        </ImageContainer>
 
         <p className='hero-title'>
-          Husband, Siberian Husky Dad, Yo-Yoer and Front End Web Developer
+          Husband, Siberian Husky and German Shepherd Dad, Yo-Yoer and Front End Web Developer
         </p>
 
         <div className='hero-links'>
@@ -21,14 +21,12 @@ export default withData((props) => {
             rel='noopener noreferrer'>
             <span className='fab fa-github-square' />
           </a>
-
           <a
             href='https://www.linkedin.com/in/gavman1995/'
             target='_blank'
             rel='noopener noreferrer'>
             <span className='fab fa-linkedin' />
           </a>
-
           <a
             href='https://codepen.io/gavman1995/'
             target='_blank'
@@ -39,9 +37,9 @@ export default withData((props) => {
       </Section>
 
       <Section white>
-        <main className='o-section__main-content'>
-          <h1 className='o-section__header'>About Me</h1>
-          <p className='c-about-me-copy'>
+        <main className='section__main-content'>
+          <h1 className='section__header'>About Me</h1>
+          <p className='section__copy'>
             I am a Front End Web Developer based in Salt Lake City, Utah.
             I have a passion for building excellent,
             beautiful, and responsive websites. I code amazing websites using ReactJS,
@@ -55,7 +53,7 @@ export default withData((props) => {
           </p>
         </main>
 
-        {/* <aside className='o-section__aside-content'>
+        {/* <aside className='section__aside-content'>
           <Carousel
             autoPlay
             dynamicHeight
@@ -71,16 +69,16 @@ export default withData((props) => {
         </aside> */}
       </Section>
 
-      <section className='o-section'>
-        <aside className='o-section__aside-content o-section__aside-content--center o-section__aside-content--last-on-mobile'>
-          <div className='c-img-container c-img-container--react'>
+      <Section>
+        <aside className='section__aside-content section__aside-content--center section__aside-content--last-on-mobile'>
+          <ImageContainer react>
             <img src='https://res.cloudinary.com/gavmanweb/image/upload/v1512019872/portfolio/react_qcumv6.svg' alt='Responsive Web Developer in Utah' />
-          </div>
+          </ImageContainer>
         </aside>
 
-        <main className='o-section__main-content'>
-          <h1 className='o-section__header'>Why React?</h1>
-          <p className='c-about-me-copy'>
+        <main className='section__main-content'>
+          <h1 className='section__header'>Why React?</h1>
+          <p className='section__copy'>
             React is a JavaScript library made by Facebook, reactjs.org specifies react as
             "A declarative, efficient, and flexible JavaScript library for building user
             interfaces." In my words, React is THE BEST JavaScript framework/library to build the
@@ -91,12 +89,12 @@ export default withData((props) => {
             writing JavaScript a breeze.
           </p>
         </main>
-      </section>
+      </Section>
 
-      <section className='o-section o-section--white'>
-        <main className='o-section__main-content'>
-          <h1 className='o-section__header'>No HTML/CSS frameworks</h1>
-          <p className='c-about-me-copy'>
+      <Section white>
+        <main className='section__main-content'>
+          <h1 className='section__header'>No HTML/CSS frameworks</h1>
+          <p className='section__copy'>
             I write my own HTML and CSS (SCSS). I do this because it allows for better customization
             over using a framework like bootstrap. Not only that, front end frameworks like
             bootstrap are HUGE, which causes the load time of your website to go up drastically,
@@ -107,16 +105,16 @@ export default withData((props) => {
           </p>
         </main>
 
-        <aside className='o-section__aside-content o-section__aside-content--center'>
-          <div className='c-img-container c-img-container--html-css'>
+        <aside className='section__aside-content section__aside-content--center'>
+          <ImageContainer htmlCSS>
             <img src='https://res.cloudinary.com/gavmanweb/image/upload/v1512020333/portfolio/html_leenj1.png' alt='Responsive Web Developer in Utah' />
-          </div>
+          </ImageContainer>
 
-          <div className='c-img-container c-img-container--html-css'>
+          <ImageContainer htmlCSS>
             <img src='https://res.cloudinary.com/gavmanweb/image/upload/v1512020337/portfolio/css_hydemc.png' alt='Responsive Web Developer in Utah' />
-          </div>
+          </ImageContainer>
         </aside>
-      </section>
+      </Section>
 
       <Portfolio />
     </Page>

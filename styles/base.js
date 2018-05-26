@@ -182,3 +182,45 @@ export const Recieved = styled.div`
     border: 0;
   }
 `
+
+export const ImageContainer = styled.div`
+  ${flexItem('100%')};
+
+  > img {
+    width: 100%;
+  }
+
+  ${props => props.hideMobile && css`
+    @media (max-width: ${sm}) {
+      display: none;
+    }
+  `}
+
+  ${props => props.heroImage && css`
+    ${flexItem('200px', '0')};
+    margin-bottom: 16px;
+
+    > img {
+      border-radius: 50%;
+    }
+  `}
+    
+
+  ${props => props.react && css`
+    ${flexItem('280px', '0')};
+
+    @media (max-width: ${sm}) {
+      flex-basis: 120px;
+    }
+  `} 
+
+  ${props => props.htmlCSS && css`
+    ${flexItem('160px', '1')};
+    padding: 16px;
+
+    @media (max-width: ${sm}) {
+      flex-basis: 120px;
+      flex-grow: 0;
+    }
+  `}
+`
