@@ -18,7 +18,6 @@ export default class MyDocument extends Document {
           <link rel='stylesheet' href='https://use.typekit.net/amm4yao.css' />
           <link rel='stylesheet' href='/static/typography.css' />
           <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css' integrity='sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp' crossOrigin='anonymous' />
-          <title>Gavyn Caldwell, Front End Developer</title>
           {this.props.styleTags}
         </Head>
         <body>
