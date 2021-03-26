@@ -1,5 +1,6 @@
 import 'isomorphic-unfetch'
 import { createClient, Provider } from 'urql'
+import Link from 'next/link'
 
 import Portfolio from '../components/portfolio'
 import { Section, Page, ImageContainer } from '../styles/base'
@@ -39,6 +40,8 @@ export default (props) => {
               <span className='fab fa-codepen' />
             </a>
           </div>
+
+          <Link href='/hire-me'><a style={{textAlign: 'center', width: '100%'}}>Hire Me</a></Link>
         </Section>
 
         <Section white>
