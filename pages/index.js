@@ -4,7 +4,7 @@ import { createClient, Provider } from 'urql'
 import Portfolio from '../components/portfolio'
 import { Section, Page, ImageContainer } from '../styles/base'
 
-const client = createClient({ url: 'https://api-uswest.graphcms.com/v1/cjnmw0gb23diu01fusk0vgtpt/master'})
+const client = createClient({ url: 'https://api-us-west-2.graphcms.com/v2/cjnmw0gb23diu01fusk0vgtpt/master'})
 
 export default (props) => {
   return (
