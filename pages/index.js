@@ -49,12 +49,11 @@ export default (props) => {
             <h1 className='section__header'>About Me</h1>
             <p className='section__copy'>
               I am a Front End Web Developer based in Salt Lake City, Utah.
-              I have a passion for building excellent,
-              beautiful, and responsive websites. I love coding and being able to exercies my creativity while making amazing websites.
-              My professional experience, which spans over 4 years, includes working closely with Designers and Back End
+              I have a passion for building beautiful, and responsive websites. I love coding and being able to exercies my creativity while making amazing websites.
+              My professional experience, which spans nearly 5 years, includes working closely with Designers and Back End
               developers, creating enterprise, financial tech, and e-commerce apps, and leading a front end team.
               I love hanging out and doing fun things with my wife, Siberian Husky and German Shepherd. I love being in nature and photographing it.
-              I also enjoy, yoyoing, playing guitar, relaxing in hot water, adventuring, drawing, painting, sculpting, leather work among many other things.
+              I also enjoy, yoyoing, playing guitar, relaxing in hot water, adventuring, drawing, painting, sculpting, leather working, gaming, and many other <a href='https://www.youtube.com/channel/UCRphJyJ8s-OqA_zMFhD998A' target='_blank'>hobbies</a>.
             </p>
           </main>
         </Section>
