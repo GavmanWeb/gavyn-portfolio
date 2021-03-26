@@ -41,7 +41,7 @@ export default (props) => {
             </a>
           </div>
 
-          <Link href='/hire-me'><a style={{textAlign: 'center', width: '100%'}}>Hire Me</a></Link>
+          {/* <Link href='/hire-me'><a style={{textAlign: 'center', width: '100%'}}>Hire Me</a></Link> */}
         </Section>
 
         <Section white>
