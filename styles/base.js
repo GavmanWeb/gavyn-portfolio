@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
-import { flexContainer, flexItem } from './tools/mixins'
-import { neutral3, neutral5, neutral6, purple, green, sm, md } from './tools/variables'
-import { gradientbg } from './tools/animations'
+import styled, { css } from 'styled-components';
+import { flexContainer, flexItem } from './tools/mixins';
+import { neutral3, neutral5, neutral6, purple, green, sm, md } from './tools/variables';
+import { gradientbg } from './tools/animations';
 
 export const container = styled.div`
   width: 100%;
@@ -24,7 +24,7 @@ export const container = styled.div`
     height: 100%;
     z-index: -1;
   }
-`
+`;
 
 export const Page = styled.div`
   max-width: 1920px;
@@ -34,7 +34,7 @@ export const Page = styled.div`
   @media (min-width: 1920px) {
     box-shadow: 0 0 48px 8px ${neutral6};
   }
-`
+`;
 
 export const Section = styled.section`
   ${flexContainer('flex-start', 'center', 'center')}
@@ -46,43 +46,51 @@ export const Section = styled.section`
     padding: 40px 16px;
   }
 
-  ${props => props.white && css`
-    background-color: #fff;
-    color: ${neutral6};
-  `}
+  ${(props) =>
+    props.white &&
+    css`
+      background-color: #fff;
+      color: ${neutral6};
+    `}
 
-  ${props => props.center && css`
-    justify-content: center;
-    text-align: center;
-  `}
+  ${(props) =>
+    props.center &&
+    css`
+      justify-content: center;
+      text-align: center;
+    `}
 
-  ${props => props.flush && css`
-    padding: 0;
-    background-color: #fff;
-  `}
+  ${(props) =>
+    props.flush &&
+    css`
+      padding: 0;
+      background-color: #fff;
+    `}
 
-  ${props => props.noBottomPadding && css`
-    padding-bottom: 0;
-  `}
+  ${(props) =>
+    props.noBottomPadding &&
+    css`
+      padding-bottom: 0;
+    `}
 
-  ${props => props.gradient && css`
-    background: linear-gradient(
-      to bottom right,
-      #fd746c, ${purple},
-      ${green}, #00c9ff,
-      ${purple}, #e73827);
-    background-repeat: no-repeat;
-    background-size: 1000% 1000%;
-    animation: ${gradientbg} 150s ease infinite;
-  `}
+  ${(props) =>
+    props.gradient &&
+    css`
+      background: linear-gradient(to bottom right, #fd746c, ${purple}, ${green}, #00c9ff, ${purple}, #e73827);
+      background-repeat: no-repeat;
+      background-size: 1000% 1000%;
+      animation: ${gradientbg} 150s ease infinite;
+    `}
 
-  ${props => props.hireme && css`
-    position: relative;
-    background: url('https://res.cloudinary.com/gavmanweb/image/upload/v1490279436/portfolio/imac-606765_1920_xdbtrx.jpg');
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-  `}
+  ${(props) =>
+    props.hireme &&
+    css`
+      position: relative;
+      background: url('https://res.cloudinary.com/gavmanweb/image/upload/v1490279436/portfolio/imac-606765_1920_xdbtrx.jpg');
+      background-attachment: fixed;
+      background-position: center center;
+      background-size: cover;
+    `}
 
   .section__header {
     width: 100%;
@@ -127,7 +135,7 @@ export const Section = styled.section`
     flex-basis: 320px;
   }
 
-  .section__aside-content--last-on-mobile { 
+  .section__aside-content--last-on-mobile {
     @media (max-width: ${md}) {
       order: 2;
     }
@@ -141,7 +149,8 @@ export const Section = styled.section`
     flex-basis: 100%;
     ${flexContainer('center', 'center')};
 
-    > a, span {
+    > a,
+    span {
       margin: 8px;
       margin-bottom: 0;
       transition: color 0.3s;
@@ -164,7 +173,7 @@ export const Section = styled.section`
       border-radius: 50%;
     }
   }
-`
+`;
 
 export const Recieved = styled.div`
   ${flexContainer('center', 'center', 'center')};
@@ -182,7 +191,7 @@ export const Recieved = styled.div`
   &:hover {
     border: 0;
   }
-`
+`;
 
 export const ImageContainer = styled.div`
   ${flexItem('100%')};
@@ -191,37 +200,45 @@ export const ImageContainer = styled.div`
     width: 100%;
   }
 
-  ${props => props.hideMobile && css`
-    @media (max-width: ${sm}) {
-      display: none;
-    }
-  `}
+  ${(props) =>
+    props.hideMobile &&
+    css`
+      @media (max-width: ${sm}) {
+        display: none;
+      }
+    `}
 
-  ${props => props.heroImage && css`
-    ${flexItem('200px', '0')};
-    margin-bottom: 16px;
+  ${(props) =>
+    props.heroImage &&
+    css`
+      ${flexItem('200px', '0')};
+      margin-bottom: 16px;
 
-    > img {
-      border-radius: 50%;
-    }
-  `}
+      > img {
+        border-radius: 50%;
+      }
+    `}
     
 
-  ${props => props.react && css`
-    ${flexItem('280px', '0')};
+  ${(props) =>
+    props.react &&
+    css`
+      ${flexItem('280px', '0')};
 
-    @media (max-width: ${sm}) {
-      flex-basis: 120px;
-    }
-  `} 
+      @media (max-width: ${sm}) {
+        flex-basis: 120px;
+      }
+    `} 
 
-  ${props => props.htmlCSS && css`
-    ${flexItem('160px', '1')};
-    padding: 16px;
+  ${(props) =>
+    props.htmlCSS &&
+    css`
+      ${flexItem('160px', '1')};
+      padding: 16px;
 
-    @media (max-width: ${sm}) {
-      flex-basis: 120px;
-      flex-grow: 0;
-    }
-  `}
-`
+      @media (max-width: ${sm}) {
+        flex-basis: 120px;
+        flex-grow: 0;
+      }
+    `}
+`;

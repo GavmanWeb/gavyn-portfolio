@@ -1,11 +1,11 @@
 import { withUrqlClient, initUrqlClient } from 'next-urql';
 import { ssrExchange, dedupExchange, cacheExchange, fetchExchange, useQuery } from 'urql';
 
-import Portfolio from '../components/portfolio'
-import Hero from '../components/hero'
-import { Page } from '../styles/base'
+import Portfolio from '../components/portfolio';
+import Hero from '../components/hero';
+import { Page } from '../styles/base';
 
-const url = 'https://api-us-west-2.graphcms.com/v2/cjnmw0gb23diu01fusk0vgtpt/master'
+const url = 'https://api-us-west-2.graphcms.com/v2/cjnmw0gb23diu01fusk0vgtpt/master';
 
 const portfoliosQuery = `query portfolios{
   portfolios(orderBy: sort_ASC) {
@@ -18,7 +18,7 @@ const portfoliosQuery = `query portfolios{
     link
     sort
   }
-}`
+}`;
 
 const landingQuery = `query landing {
   landing(where: {id: "ckt24dyps7emn0a68n7akkl2x"}) {
@@ -30,21 +30,19 @@ const landingQuery = `query landing {
     }
     shortAbout
   }
-}`
+}`;
 
-
-function Home () {
-  const [landingResult] = useQuery({ query: landingQuery })
-  const [portfoliosResult] = useQuery({ query: portfoliosQuery })
+function Home() {
+  const [landingResult] = useQuery({ query: landingQuery });
+  const [portfoliosResult] = useQuery({ query: portfoliosQuery });
 
   return (
     <Page>
       <Hero result={landingResult} />
       <Portfolio result={portfoliosResult} />
     </Page>
-  )
+  );
 }
-
 
 export async function getStaticProps(ctx) {
   const ssrCache = ssrExchange({ isClient: false });
@@ -70,8 +68,6 @@ export async function getStaticProps(ctx) {
   };
 }
 
-export default withUrqlClient(
-  ssr => ({
-    url,
-  })
-)(Home);
+export default withUrqlClient((ssr) => ({
+  url,
+}))(Home);

@@ -1,29 +1,21 @@
-import { Section, ImageContainer } from '../styles/base'
+import { Section, ImageContainer } from '../styles/base';
 
-function Hero ({result}) {
+function Hero({ result }) {
   return (
     <>
       <Section gradient center>
         <ImageContainer heroImage>
-          <img alt='Responsive Web Developer in Utah' src={result.data.landing.profileImage.url} />
+          <img alt="Responsive Web Developer in Utah" src={result.data.landing.profileImage.url} />
         </ImageContainer>
 
-        <p className='hero-title'>
-          {result.data.landing.shortAbout}
-        </p>
+        <p className="hero-title">{result.data.landing.shortAbout}</p>
 
-        <div className='hero-links'>
-          <a
-            href='https://github.com/gavyncaldwell'
-            target='_blank'
-            rel='noopener noreferrer'>
-            <span className='fab fa-github-square' />
+        <div className="hero-links">
+          <a href="https://github.com/gavyncaldwell" target="_blank" rel="noopener noreferrer">
+            <span className="fab fa-github-square" />
           </a>
-          <a
-            href='https://www.linkedin.com/in/gavyncaldwell/'
-            target='_blank'
-            rel='noopener noreferrer'>
-            <span className='fab fa-linkedin' />
+          <a href="https://www.linkedin.com/in/gavyncaldwell/" target="_blank" rel="noopener noreferrer">
+            <span className="fab fa-linkedin" />
           </a>
         </div>
 
@@ -31,13 +23,13 @@ function Hero ({result}) {
       </Section>
 
       <Section white>
-        <main className='section__main-content'>
-          <h1 className='section__header'>About Me</h1>
-          <div dangerouslySetInnerHTML={{__html: result.data.landing.aboutMe.html}}></div>
+        <main className="section__main-content">
+          <h1 className="section__header">About Me</h1>
+          <div dangerouslySetInnerHTML={{ __html: result.data.landing.aboutMe.html }}></div>
         </main>
       </Section>
     </>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
