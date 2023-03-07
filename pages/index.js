@@ -1,6 +1,5 @@
 import 'isomorphic-unfetch'
 import { createClient, Provider } from 'urql'
-import Link from 'next/link'
 
 import Portfolio from '../components/portfolio'
 import Hero from '../components/hero'
