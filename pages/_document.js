@@ -1,12 +1,15 @@
+import 'isomorphic-unfetch'
+import { createClient, Provider } from 'urql'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+
+const client = createClient({ url: 'https://api-us-west-2.graphcms.com/v2/cjnmw0gb23diu01fusk0vgtpt/master'})
 
 export default class MyDocument extends Document {
   render () {
     return (
       <Html>
         <Head>
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='stylesheet' href='/reset.css' />
           <link rel='stylesheet' href='https://use.typekit.net/amm4yao.css' />
           <link rel='stylesheet' href='/typography.css' />
@@ -14,7 +17,9 @@ export default class MyDocument extends Document {
           {this.props.styleTags}
         </Head>
         <body>
-          <Main />
+          <Provider value={client}>
+            <Main />
+          </Provider>
           <NextScript />
         </body>
       </Html>
