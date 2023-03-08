@@ -143,15 +143,20 @@ export const Section = styled.section`
 
   .hero-title {
     width: 100%;
+    padding: 0 16px;
   }
 
   .hero-links {
     flex-basis: 100%;
     ${flexContainer('center', 'center')};
 
+    p {
+      color: #fff;
+    }
+
     > a,
     span {
-      margin: 8px;
+      margin: 8px 16px;
       margin-bottom: 0;
       transition: color 0.3s;
       font-size: 40px;

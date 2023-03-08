@@ -13,9 +13,15 @@ function Hero({ result }) {
         <div className="hero-links">
           <a href="https://github.com/gavyncaldwell" target="_blank" rel="noopener noreferrer">
             <span className="fab fa-github-square" />
+            <p>GitHub</p>
           </a>
           <a href="https://www.linkedin.com/in/gavyncaldwell/" target="_blank" rel="noopener noreferrer">
             <span className="fab fa-linkedin" />
+            <p>LinkedIn</p>
+          </a>
+          <a href="assets/resume.pdf" download>
+            <span className="fas fa-file-pdf" />
+            <p>Resume</p>
           </a>
         </div>
 
