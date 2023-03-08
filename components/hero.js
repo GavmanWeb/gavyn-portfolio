@@ -19,7 +19,7 @@ function Hero({ result }) {
             <span className="fab fa-linkedin" />
             <p>LinkedIn</p>
           </a>
-          <a href="assets/resume.pdf" download>
+          <a href="assets/gavyn-caldwell-resume.pdf" download>
             <span className="fas fa-file-pdf" />
             <p>Resume</p>
           </a>
